@@ -28,7 +28,6 @@ public class Xhttp {
         Callback.CommonCallback<String> callback = new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-
                 ArrayList<NetEase> neteaseNews = new ArrayList<>();
                 Gson gson = new Gson();
                 try {
@@ -50,7 +49,7 @@ public class Xhttp {
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-                Log.d(TAG, "onError: ");
+                Log.d(TAG, "onError: " +ex.toString());
             }
 
             @Override
